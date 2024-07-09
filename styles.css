@@ -1,0 +1,261 @@
+/* Default styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --color-blue: #0A3871;  
+}
+
+body {
+    background-color: #677179;
+    font-family: "Inter", sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0; 
+}
+
+.separador {
+    display: flex;
+    margin-top: 2vh;
+    justify-content: space-around;
+}
+
+.separador2 {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    gap: .2vw;
+    margin-bottom: -2vh;
+    justify-content: center;
+}
+
+#textarea-input::placeholder {
+    color: var(--color-blue);
+    font-size: 2rem;   
+}
+
+#textarea-input:focus {
+    outline: none;
+}
+
+#textarea-input {
+    color: var(--color-blue);
+    font-size: 2rem;
+    width: 60vw;
+    height: 70vh;
+    overflow: hidden;
+    resize: none;
+    border-radius: 8px;
+    padding: .5vw;
+    background-color: #919AA1;
+    margin: 0 auto; 
+    box-sizing: border-box; 
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+    
+#exclamacion {
+    filter: grayscale(100%) brightness(0%); 
+}
+
+.separador3 {
+    display: flex;
+    gap: 1vw;
+    justify-content: center;
+}
+
+.btn {
+    font-size: 1rem;
+    border-style: solid;
+}
+
+.encriptar {
+    background-color: var(--color-blue);
+    color: #fff;
+    height: 7vh;
+    width: 30vh;
+    border-radius: 16px;
+    border: none;
+}
+
+.desencriptar {
+    background-color: #fff;
+    color: var(--color-blue);
+    height: 7vh;
+    width: 30vh;
+    border-radius: 16px;
+    border-color: var(--color-blue);
+}
+
+.encriptar:hover,
+.desencriptar:hover {
+    border: solid white;
+}
+
+aside {
+    background-color: #919AA1;
+    border-radius: 16px;
+    width: 22vw;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; 
+}
+
+h2 {
+    width: 85%;
+    height: 80%;
+    overflow-y: auto; 
+    word-wrap: break-word;
+    scrollbar-width: thin; 
+}
+
+.copiar {
+    background-color: #fff;
+    color: var(--color-blue);
+    height: 7vh;
+    width: 30vh;
+    border-radius: 16px;
+    border-color: var(--color-blue);
+    margin-bottom: 2.6vh;
+}
+
+.copiar:hover {
+    border: solid white;
+}
+
+
+#sinTexto {
+    background-color: #919AA1;
+    border-radius: 16px;
+    width: 22vw;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+    overflow: hidden; 
+}
+
+
+#persona {
+    width: 80%;
+    margin-top: 10%; 
+}
+
+.aside-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+    margin-top: 1vh;
+}
+
+h2.sinTexto {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 1vh; 
+}
+
+h3.sinTexto {
+    font-weight: normal;
+    color: white;
+    margin-bottom: 2vh; 
+}
+
+@media (max-width: 768px) {
+    .separador {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    aside, #sinTexto {
+        width: 80vw; 
+        height: 40vh; 
+        margin-top: 5vh; 
+    }
+
+    #persona {
+        display: none;
+    }
+
+    h2.sinTexto {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: .0vh; 
+    }
+    
+    h3.sinTexto {
+        font-weight: normal;
+        color: white;
+        margin-bottom: .0vh; 
+    }
+
+    .encriptar,
+    .desencriptar {
+        width: 25vh; 
+        height: 5vh; 
+        font-size: 0.8rem;
+    }
+
+    #textarea-input {
+        width: 90%;
+    }
+
+    h4 {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .separador {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+    }
+
+    aside, #sinTexto {
+        width: 90vw;
+        height: 30vh; 
+        margin-top: 3vh; 
+    }
+
+    #sinTexto {
+        flex-direction: column-reverse;
+    }
+
+    #persona {
+        display: none;
+    }
+
+    h2.sinTexto {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    
+    h3.sinTexto {
+        font-weight: normal;
+        color: white;
+        margin-bottom: .0vh; 
+    }
+
+    .encriptar,
+    .desencriptar {
+        width: 20vh; 
+        height: 4.5vh; 
+        font-size: 0.7rem; 
+    }
+
+    #textarea-input {
+        width: 90%;
+    }
+
+    h4 {
+        font-size: 0.7rem;
+    }
+}

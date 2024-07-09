@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto -- Matias Peterka</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <header>
+        <img src="assets/Logo.png" alt="Logo de Alura Latam" style="margin-top: 2vh;">    
+    </header>
+    <div class="separador">
+        <main>
+            <textarea placeholder="Ingrese el texto aqui" id="textarea-input"></textarea>
+            <div class="separador2">
+                <img src="assets/exclamation-circle-fill.png" id="exclamacion" alt="Icono simbolo exclamatorio">
+                <h4>Solo letras minúsculas y sin acentos</h4>    
+            </div>
+            <div class="separador3">
+                <button class="btn encriptar" onclick="encriptarTexto(textoAcopiar)">Encriptar</button>
+                <button class="btn desencriptar" onclick="desencriptarTexto(textoAcopiar)">Desencriptar</button>
+            </div>
+        </main>
+        <aside style="display: none;" id="conTexto">
+            <h2 id="texto-a-copiar"></h2>
+            <button class="btn copiar" onclick="copiarTexto()">Copiar</button>
+        </aside>
+        <aside id="sinTexto">
+            <img src="assets/Muñeco.png" id="persona" alt="Persona arrodillada con una lupa">
+            <div class="aside-texto sinTexto">
+                <h2 class="sinTexto">Ningún mensaje fue encontrado</h2>
+                <h3 class="sinTexto">Ingresa el texto que desees encriptar o desencriptar.</h3>
+            </div></aside>        
+    </div>
+</body> 
+<script src="./script.js"></script>
+</html>
